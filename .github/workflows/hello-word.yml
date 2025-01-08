@@ -25,7 +25,5 @@ jobs:
       run: npm install
 
     - name: Run linter
-      run: |
-        export PATH="./node_modules/.bin:$PATH"
-        npm run lint
+      run: npm run lint
 
