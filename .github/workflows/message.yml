@@ -1,0 +1,17 @@
+name: Utilisation des Variables d'Environnement
+
+on:
+  push:
+    branches:
+      - ex3
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configuration de la variable d'environnement
+        run: echo "MESSAGE=Déploiement réussi" >> $GITHUB_ENV
+
+      - name: Affichage de la variable
+        run: echo "$MESSAGE"
